@@ -1,0 +1,99 @@
+.container {
+    margin: 2rem;
+    background-color: #f2f2f2;
+  }
+  
+  .formSection {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 2rem;
+    gap: 2rem;
+  }
+  
+  .formLeft {
+    flex: 1 1 400px;
+    max-width: 500px;
+  }
+  
+  .formRight {
+    flex: 1 1 400px;
+    text-align: center;
+  }
+  
+  .formTitle {
+    color: #00b894;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formGroup label {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  .formMainTitle {
+    color: #00b894;
+    font-size: 2.5rem;
+    padding-top: 2rem;
+    text-align: center;
+  }
+  
+  .formGroup input,
+  .formGroup select,
+  .formGroup textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .submitButton {
+    background-color: #00b894;
+    color: white;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .submitButton:hover {
+    background-color: #019874;
+  }
+  
+  .formImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .footer_link{
+    color: whi;
+  }
+  /* Responsive untuk layar kecil (max-width: 768px) */
+  @media (min-width: 768px) {
+    /* Tidak ada yang perlu diubah di sini. */
+  }
+  
+  /* Large Screen */
+  @media (min-width: 992px) {
+    .container {
+      max-width: 1200px;
+      margin: 3rem auto;
+    }
+  }
+  

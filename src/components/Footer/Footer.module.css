@@ -1,0 +1,99 @@
+.container {
+  background-color: #1dd1a1; 
+  padding: 1rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+
+.footer__brand {
+  font-weight: bold;
+}
+
+.footer__title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.footer__list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__item {
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.3s;
+}
+
+.footer__item:hover {
+  opacity: 0.7;
+}
+
+
+.container {
+  background-color: #1dd1a1;
+  padding: 1rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+
+.footer__brand {
+  font-weight: bold;
+}
+
+.footer__title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.footer__author {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.footer__list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__item {
+  cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.3s;
+}
+
+.footer__item:hover {
+  opacity: 0.7;
+}
+.footer__link {
+  color: white;  
+ 
+}
+
+@media (min-width: 768px) {
+  /* Tidak ada yang perlu diubah di sini. */
+}
+
+/* Layar Besar */
+@media (min-width: 992px) {
+  .container {
+    max-width: 1200px;
+    margin: 3rem auto;
+  }
+}

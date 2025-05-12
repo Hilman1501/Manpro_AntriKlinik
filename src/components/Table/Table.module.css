@@ -1,0 +1,45 @@
+/* Table */
+.container {
+    margin: 2rem;
+    text-align: center;
+  }
+  
+  .title {
+    color: #00b894;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    color: #636e72;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+  .table th, 
+  .table td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: center;
+  }
+  
+  .table th {
+    background-color: #f0f0f0;
+    color: #00b894;
+    font-weight: bold;
+  }
+  
+  /* Large Screen */
+  @media (min-width: 992px) {
+    .container {
+      max-width: 1200px;
+      margin: 3rem auto;
+    }
+  }
+  
