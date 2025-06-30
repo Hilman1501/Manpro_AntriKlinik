@@ -1,45 +1,75 @@
-/* Table */
 .container {
-    margin: 2rem;
-    text-align: center;
-  }
-  
-  .title {
-    color: #00b894;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .subtitle {
-    color: #636e72;
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .table {
-    margin: 0 auto;
-    border-collapse: collapse;
-    width: 80%;
-  }
-  
-  .table th, 
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 1200px;
+  background-color: #ffffff;
+}
+
+.title {
+  color: #00b894;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  color: #636e72;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead tr {
+  background-color: #f7f7f7;
+  color: #00b894;
+}
+
+.table th,
+.table td {
+  border: 1px solid #f3f1f1;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.statusButton {
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.waiting {
+  background-color: #f1c40f;
+}
+
+.served {
+  background-color: #00b894;
+}
+
+.deleteButton {
+  background-color: #d63031;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: #b71c1c;
+}
+
+@media (max-width: 768px) {
+  .table th,
   .table td {
-    border: 1px solid #ccc;
-    padding: 0.75rem;
-    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.9rem;
   }
-  
-  .table th {
-    background-color: #f0f0f0;
-    color: #00b894;
-    font-weight: bold;
-  }
-  
-  /* Large Screen */
-  @media (min-width: 992px) {
-    .container {
-      max-width: 1200px;
-      margin: 3rem auto;
-    }
-  }
-  
+}

@@ -1,16 +1,19 @@
+import { useContext } from 'react';
 import styles from './section.module.css';
+import { AntrianContext } from '../../context/AntrianContext';
 
-function Section({ 
-  patients, 
-  mainTitle = "Antrian Klinik", 
-  subTitle = "Data Antrian Hari Ini", 
-  registeredLabel = "Pasien Terdaftar", 
-  servedLabel = "Pasien Dilayani", 
-  waitingLabel = "Pasien Menunggu" 
+function Section({
+  mainTitle = "Antrian Klinik",
+  subTitle = "Data Antrian Hari Ini",
+  registeredLabel = "Pasien Terdaftar",
+  servedLabel = "Pasien Dilayani",
+  waitingLabel = "Pasien Menunggu"
 }) {
-  const total = patients.length;
-  const served = patients.filter((p) => p.status === "Dilayani").length;
-  const waiting = patients.filter((p) => p.status === "Menunggu").length;
+  const { antrian } = useContext(AntrianContext);
+
+  const total = antrian.length;
+  const served = antrian.filter((p) => p.status === "Dilayani").length;
+  const waiting = antrian.filter((p) => p.status === "Menunggu").length;
 
   return (
     <div className={styles.container}>

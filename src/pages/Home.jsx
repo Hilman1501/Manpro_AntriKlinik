@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Navbar from "../components/navbar/navbar";
-import Footer from "../components/Footer/Footer";
 import Hero from "../components/Hero/hero";
 import Section from "../components/section/section";
 import Table from "../components/Table/table";
@@ -15,33 +13,33 @@ function Home() {
 
   const handleToggleStatus = (index) => {
     const updatedPatients = [...patients];
-    updatedPatients[index].status = updatedPatients[index].status === "Menunggu" ? "Menunggu" : "Dilayani";
+    updatedPatients[index].status =
+      updatedPatients[index].status === "Menunggu"
+        ? "Dilayani"
+        : "Menunggu";
     setPatients(updatedPatients);
   };
 
   return (
-    <div>
-      <Navbar />
-      <main>
-        <section id="home"> {/* ID untuk Home */}
-          <Hero />
-        </section>
-        
-        <section id="data-antrian"> {/* ID untuk Data Antrian */}
-          <Section patients={patients} />
-          <Table patients={patients} setPatients={setPatients} onToggleStatus={handleToggleStatus} />
-        </section>
-        
-        <section id="data-pasien"> {/* ID untuk Data Pasien */}
-          <Form onSubmit={handleAddPatient} />
-        </section>
+    <main>
+      <section id="home">
+        <Hero />
+      </section>
 
-        <section id="form"> {/* ID untuk Form */}
-          {/* Form lainnya jika diperlukan */}
-        </section>
-      </main>
-      <Footer />
-    </div>
+      <section id="data-antrian">
+        <Section patients={patients} />
+        <Table
+          patients={patients}
+          setPatients={setPatients}
+          onToggleStatus={handleToggleStatus}
+        />
+      </section>
+
+     
+      <section id="form">
+        {/* Form lainnya jika diperlukan */}
+      </section>
+    </main>
   );
 }
 

@@ -1,3 +1,5 @@
+// src/components/Navbar/Navbar.jsx
+import { Link } from 'react-router-dom';  
 import styles from './navbar.module.css';
 
 function Navbar() {
@@ -10,16 +12,13 @@ function Navbar() {
 
         <ul className={styles.navbar__list}>
           <li className={styles.navbar__item}>
-            <a href="#home" className={styles.navbar__link}>Home</a>
+            <Link to="/" className={styles.navbar__link}>Home</Link>
           </li>
           <li className={styles.navbar__item}>
-            <a href="#data-antrian" className={styles.navbar__link}>Data Antrian</a>
+            <Link to="/daftar-antrian" className={styles.navbar__link}>Data Pasien</Link>
           </li>
           <li className={styles.navbar__item}>
-            <a href="#data-pasien" className={styles.navbar__link}>Data Pasien</a>
-          </li>
-          <li className={styles.navbar__item}>
-            <a href="#form" className={styles.navbar__link}>Form</a>
+            <Link to="/antrian-baru" className={styles.navbar__link}>Form</Link>
           </li>
         </ul>
       </nav>

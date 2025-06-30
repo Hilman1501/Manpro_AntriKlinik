@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import styles from './form.module.css';
+import { AntrianContext } from '../../context/AntrianContext';
 
 function Form({
-  onSubmit,
   title = "Formulir Antrian Klinik",
   imageUrl = "https://media.istockphoto.com/id/1186549652/id/vektor/orang-kartun-berdiri-dalam-antrian-untuk-kantor-dokter-pasien-klinik-medis-mengantri-untuk.jpg?s=170667a&w=0&k=20&c=-U_Yl4LqKvYVPL8akCw3TgguDK7tBL8aHg7jXZx5eig=",
   buttonText = "Daftar"
@@ -12,11 +12,12 @@ function Form({
   const [gender, setGender] = useState('');
   const [keluhan, setKeluhan] = useState('');
 
+  const { addAntrian } = useContext(AntrianContext);
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit({ nama, telepon, gender, keluhan });
+    addAntrian({ nama, telepon, gender, keluhan });
 
-    // Reset form
     setNama('');
     setTelepon('');
     setGender('');
